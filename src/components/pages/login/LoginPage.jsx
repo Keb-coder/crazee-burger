@@ -18,12 +18,13 @@ const LoginPageStyled = styled.div`
   align-items: center;
   flex-direction:column;
 
-::before{
+&::before{
   content: "";
   background: url("src/assets/images/burger-background.jpg") rgba(0, 0, 0, 0.5);
   background-size: cover;
   background-position: center;
   background-blend-mode: darken;
+  
 
   position:absolute;
         top: 0;
