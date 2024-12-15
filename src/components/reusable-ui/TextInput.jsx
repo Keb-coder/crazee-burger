@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export default function Input({Icon,value, onChange,className,...restProps}) {
+export default function TextInput({Icon,value, onChange,className,...restProps}) {
     return (
     <InputStyled className ={className} >
       {Icon && Icon}
@@ -24,11 +24,14 @@ const InputStyled = styled.div`
         font-size: 15px;
         color: #17161a;
         width: 100%;
+        margin-left: 5px;
+
     }
 
     &::placeholder {
         color: lightgrey;
         background: white;
+        
     }
 
     .icon {
