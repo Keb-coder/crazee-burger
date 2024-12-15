@@ -1,8 +1,10 @@
 import React, { useState } from "react";
-import { BsPersonCircle } from "react-icons/bs";
-import { IoChevronForward} from "react-icons/io5";
+import { IoChevronForward } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
+import Input from "../../reusable-ui/Input";
+import { BsPersonCircle } from "react-icons/bs";
+
 
 export default function LoginForm() {
 	const [inputValue, setInputValue] = useState("");
@@ -14,36 +16,31 @@ export default function LoginForm() {
 		navigate(`order/${inputValue}`);
 	};
 
-	const handleCHange = (event) => {
+	const handleChange = (event) => {
 		setInputValue(event.target.value);
 	};
 	return (
 		<LoginFormStyled action="submit" onSubmit={handleSubmit}>
 			<h1>Bienvenue chez nous !</h1>
-			<hr />
+			<hr/>
 			<h2>Connectez-vous</h2>
-              <div className="input-with-icon">
-			  <BsPersonCircle className="icon" />
-				<input
-					id="connexion"
-					value={inputValue}
-					onChange={handleCHange}
-					type="text"
-					name="Idendifiant"
-					placeholder="Entrez votre prénom"
-					required
-				/> 
-              </div>
-
-				<button className="button-with-icon">
-					<span>Accéder à mon espace</span>
-					<IoChevronForward className="icon" />
-				</button>
+			<Input
+				value={inputValue}
+				onChange={handleChange}
+				placeholder={"Entrez votre prénom"}
+				required
+				Icon={<BsPersonCircle className="icon"/>}
+				className={"input-with-icon"}
+			/>
+			<button className="button-with-icon">
+				<span>Accéder à mon espace</span>
+				<IoChevronForward className="icon" />
+			</button>
 		</LoginFormStyled>
 	);
 }
 
-const LoginFormStyled = styled.div`
+const LoginFormStyled = styled.form`
 text-align: center;
 max-width: 500px;
 min-width: 400px;
@@ -115,10 +112,6 @@ h2{
 	border: 1px solid #ff9f1b;
 }
 
-&::placeholder{
-	background: white;
-	color:lightgrey;
-}
 
 &:disabled{
 	opacity: 0.6;
@@ -126,19 +119,4 @@ h2{
 }
 }
 
-input{
-	border: none;
-	font-size: 15px;
-	width: 100%;
-}
-
-
-
-.icon {
-display: flex;
-justify-content: center;
-align-items:center;
-font-size: 15px;
-margin-left:10px;
-}
 `;
