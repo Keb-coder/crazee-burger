@@ -1,12 +1,18 @@
 import styled from "styled-components";
 
-export default function TextInput({Icon,value, onChange,className,...restProps}) {
-    return (
-    <InputStyled className ={className} >
-      {Icon && Icon}
-     <input value={value} onChange={onChange} {...restProps}/>
-    </InputStyled>
-    );
+export default function TextInput({
+	Icon,
+	value,
+	onChange,
+	className,
+	...restProps
+}) {
+	return (
+		<InputStyled className={className}>
+			{Icon && Icon}
+			<input value={value} onChange={onChange} {...restProps} />
+		</InputStyled>
+	);
 }
 
 const InputStyled = styled.div`
