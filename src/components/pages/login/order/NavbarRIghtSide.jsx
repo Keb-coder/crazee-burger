@@ -4,7 +4,7 @@ import Profile from "./Profile";
 export default function NavbarRIghtSide({ username }) {
 	return (
 		<NavbarRIghtSideStyled>
-			<Profile />
+			<Profile username={username} />
 		</NavbarRIghtSideStyled>
 	);
 }
@@ -13,6 +13,7 @@ const NavbarRIghtSideStyled = styled.div`
 display: flex;
 align-items: center;
 padding-right: 50px;
+
 
 
 
