@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { theme } from "../../theme";
 
 export default function Logo() {
 	return (
@@ -21,20 +22,20 @@ transform: scale(2.5);
 h1 {
   display: inline;
   text-align: center;
-  color: #ffa01b;
-  font-size: 2.25rem; 
+  color: ${theme.colors.primary};
+  font-size: ${theme.fonts.size.P4}; 
   line-height: 1em; 
-  font-weight: 700;
+  font-weight: ${theme.fonts.weight.bold};
   text-transform: uppercase;
-  letter-spacing: 0.09375rem;
+  letter-spacing: 1.5px;
   font-family: "Amatic SC", cursive;
 }
 
 img {
   object-fit: contain;
   object-position: center;
-  height: 3.75rem; 
+  height: 60px; 
   width: 5rem; 
-  margin: 0 0.3125rem; 
+  margin: 0 5px; 
 }
 `;

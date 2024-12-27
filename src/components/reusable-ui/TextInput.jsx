@@ -1,51 +1,38 @@
 import styled from "styled-components";
+import { theme } from "../../theme";
 
-export default function TextInput({
-	Icon,
-	value,
-	onChange,
-	className,
-	...restProps
-}) {
+export default function TextInput({ value, onChange, Icon, ...extraProps }) {
 	return (
-		<InputStyled className={className}>
+		<InputStyled>
 			{Icon && Icon}
-			<input value={value} onChange={onChange} {...restProps} />
+			<input onChange={onChange} type="text" {...extraProps} />
 		</InputStyled>
 	);
 }
 
 const InputStyled = styled.div`
-    .input-with-icon {
-        background-color: #fff;
-        border-radius: 5px;
-        display: flex;
-        align-items: center;
-        padding: 18px 24px;
-        margin: 18px 0;
-    }
+  background-color: ${theme.colors.white};
+  border-radius: ${theme.borderRadius.round};
+  display: flex;
+  align-items: center;
+  padding: 18px 24px;
+  margin: 18px 0; 
 
-    input {
-        border: none;
-        font-size: 15px;
-        color: #17161a;
-        width: 100%;
-        margin-left: 5px;
+  .icon {
+    font-size: ${theme.fonts.size.P0};
+    margin-right: 8px;
+    color: ${theme.colors.greySemiDark};
+  }
 
-    }
+  input {
+    border: none;
+    font-size: ${theme.fonts.size.P0};
+    color: ${theme.colors.dark};
+    width: 100%;
 
     &::placeholder {
-        color: lightgrey;
-        background: white;
-        
+      background: ${theme.colors.white};
+      color: ${theme.colors.greyMedium};
     }
-
-    .icon {
-        color: grey;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 15px;
-        margin-left: 10px;
-    }
+  }
 `;
