@@ -1,17 +1,11 @@
-import { Link } from "react-router-dom";
 import styled from "styled-components";
+import NavbarRIghtSide from "./NavbarRIghtSide";
 
 export default function Navbar({ username }) {
 	return (
 		<NavBarStyled>
 			<div className="left-side">Left</div>
-			<div className="right-side">
-				Right
-				<h1>Hey {username}</h1>
-				<Link to="/">
-					<button type="button">Déconnexion</button>
-				</Link>
-			</div>
+			<NavbarRIghtSide username={username} />
 		</NavBarStyled>
 	);
 }
@@ -25,7 +19,4 @@ justify-content: space-between;
 .left-side{
 background: violet;
 }
-.right-side{
-	background: yellow;	
-}	
 `;
