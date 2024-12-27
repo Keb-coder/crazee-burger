@@ -28,8 +28,5 @@ align-items: center;
   width: 1400px;
   display: flex;
   flex-direction: column;
-
-
 }
-
 `;

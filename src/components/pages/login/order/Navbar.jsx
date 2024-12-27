@@ -1,10 +1,11 @@
 import styled from "styled-components";
 import NavbarRIghtSide from "./NavbarRIghtSide";
+import Logo from "../../../reusable-ui/Logo";
 
 export default function Navbar({ username }) {
 	return (
 		<NavBarStyled>
-			<div className="left-side">Left</div>
+			<Logo />
 			<NavbarRIghtSide username={username} />
 		</NavBarStyled>
 	);
@@ -15,8 +16,5 @@ background: blue;
 height: 10vh;
 display: flex;
 justify-content: space-between;
-
-.left-side{
-background: violet;
-}
+padding: 0 20px;
 `;
