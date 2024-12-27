@@ -1,17 +1,22 @@
-import { Link } from "react-router-dom";
 import styled from "styled-components";
+import Profile from "./Profile";
 
 export default function NavbarRIghtSide({ username }) {
 	return (
 		<NavbarRIghtSideStyled>
-			<h1>Hey {username}</h1>
-			<Link to="/">
-				<button type="button">Déconnexion</button>
-			</Link>
+			<Profile />
 		</NavbarRIghtSideStyled>
 	);
 }
 
 const NavbarRIghtSideStyled = styled.div`
-background: yellow;	
+display: flex;
+align-items: center;
+padding-right: 50px;
+
+
+
+.profile{
+	background: violet;
+}
 `;
