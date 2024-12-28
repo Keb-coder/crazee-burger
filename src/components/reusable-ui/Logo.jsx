@@ -1,12 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 import { theme } from "../../theme";
+import logo from "../../assets/images/logo-orange.png";
 
-export default function Logo() {
+export default function Logo({ classname, onClick }) {
 	return (
-		<LogoStyled>
+		<LogoStyled className={classname} onClick={onClick}>
 			<h1>CRAZEE</h1>
-			<img src="src/assets/images/logo-orange.png" alt="logo-crazee-burger" />
+			<img src={logo} alt="logo-crazee-burger" />
 			<h1>BURGER</h1>
 		</LogoStyled>
 	);
@@ -17,7 +18,6 @@ const LogoStyled = styled.div`
 color: white;
 display: flex;
 align-items: center;
-transform: scale(2.5);
 
 h1 {
   display: inline;
