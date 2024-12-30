@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Profile from "./Profile";
+import Profile from "../Navbar/Profile";
 
 export default function NavbarRIghtSide({ username }) {
 	return (
