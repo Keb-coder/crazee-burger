@@ -1,7 +1,6 @@
-import React from "react";
 import styled from "styled-components";
-import { theme } from "../../theme";
-import logo from "../../assets/images/logo-orange.png";
+import logo from "../../../assets/images/logo-orange.png";
+import { theme } from "../../../theme";
 
 export default function Logo({ classname, onClick }) {
 	return (

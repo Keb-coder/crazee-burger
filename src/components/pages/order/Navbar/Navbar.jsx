@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import NavbarRIghtSide from "./NavbarRIghtSide";
-import Logo from "../../../reusable-ui/Logo";
 import { theme } from "../../../../theme";
 import { refreshPage } from "../../../../utils/window";
+import NavbarRIghtSide from "./NavbarRIghtSide";
+import Logo from "../../reusable-ui/Logo";
 
 export default function Navbar({ username }) {
 	return (
@@ -21,7 +21,7 @@ justify-content: space-between;
 padding: 0 20px;
 border-top-right-radius: ${theme.borderRadius.extraRound};
 border-top-left-radius: ${theme.borderRadius.extraRound};
-
+border-bottom: 1px solid ${theme.colors.greyLight};
 .logo-order-page{
 	cursor:pointer;
 }
