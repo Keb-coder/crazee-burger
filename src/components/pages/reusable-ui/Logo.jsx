@@ -24,7 +24,7 @@ h1 {
   color: ${theme.colors.primary};
   font-size: ${theme.fonts.size.P4}; 
   line-height: 1em; 
-  font-weight: ${theme.fonts.weight.bold};
+  font-weight: ${theme.fonts.weights.bold};
   text-transform: uppercase;
   letter-spacing: 1.5px;
   font-family: "Amatic SC", cursive;

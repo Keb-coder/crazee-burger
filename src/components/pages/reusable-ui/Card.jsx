@@ -1,24 +1,24 @@
-import styled from "styled-components"
-import PrimaryButton from "./PrimaryButton"
-import { theme } from "../../../theme"
+import styled from "styled-components";
+import PrimaryButton from "./PrimaryButton";
+import { theme } from "../../../theme";
 
 export default function Card({ title, imageSource, leftDescription }) {
-  return (
-    <CardStyled className="produit">
-      <div className="image">
-        <img src={imageSource} alt={title} />
-      </div>
-      <div className="text-info">
-        <div className="title">{title}</div>
-        <div className="description">
-          <div className="left-description">{leftDescription}</div>
-          <div className="right-description">
-            <PrimaryButton className="primary-button" label={"Ajouter"} />
-          </div>
-        </div>
-      </div>
-    </CardStyled>
-  )
+	return (
+		<CardStyled className="produit">
+			<div className="image">
+				<img src={imageSource} alt={title} />
+			</div>
+			<div className="text-info">
+				<div className="title">{title}</div>
+				<div className="description">
+					<div className="left-description">{leftDescription}</div>
+					<div className="right-description">
+						<PrimaryButton className="primary-button" label={"Ajouter"} />
+					</div>
+				</div>
+			</div>
+		</CardStyled>
+	);
 }
 
 const CardStyled = styled.div`
@@ -55,7 +55,7 @@ const CardStyled = styled.div`
       font-size: ${theme.fonts.size.P4};
       position: relative;
       bottom: 10px;
-      font-weight: ${theme.fonts.weight.bold};
+      font-weight: ${theme.fonts.weights.bold};
       color: ${theme.colors.dark};
       text-align: left;
       white-space: nowrap;
@@ -73,11 +73,11 @@ const CardStyled = styled.div`
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        font-weight: ${theme.fonts.weight.medium};
+        font-weight: ${theme.fonts.weights.medium};
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        font-weight: ${theme.fonts.weight.medium};
+        font-weight: ${theme.fonts.weights.medium};
         color: ${theme.colors.primary};
       }
 
@@ -95,4 +95,4 @@ const CardStyled = styled.div`
       }
     }
   }
-`
+`;

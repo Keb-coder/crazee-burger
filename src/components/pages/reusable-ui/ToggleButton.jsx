@@ -1,29 +1,29 @@
-import styled from "styled-components"
-import { theme } from "../../../theme"
+import styled from "styled-components";
+import { theme } from "../../../theme";
 
 export default function ToggleButton({
-  isChecked,
-  onToggle,
-  labelIfChecked = "Fermer",
-  labelIfUnchecked = "Ouvrir",
+	isChecked,
+	onToggle,
+	labelIfChecked = "Fermer",
+	labelIfUnchecked = "Ouvrir",
 }) {
-  return (
-    <ToggleButtonStyled>
-      <input
-        type="checkbox"
-        className="toggle"
-        id="rounded"
-        checked={isChecked}
-        onChange={onToggle}
-      />
-      <label
-        htmlFor="rounded"
-        className="rounded"
-        data-checked={labelIfChecked}
-        data-unchecked={labelIfUnchecked}
-      ></label>
-    </ToggleButtonStyled>
-  )
+	return (
+		<ToggleButtonStyled>
+			<input
+				type="checkbox"
+				className="toggle"
+				id="rounded"
+				checked={isChecked}
+				onChange={onToggle}
+			/>
+			<label
+				htmlFor="rounded"
+				className="rounded"
+				data-checked={labelIfChecked}
+				data-unchecked={labelIfUnchecked}
+			></label>
+		</ToggleButtonStyled>
+	)
 }
 
 const ToggleButtonStyled = styled.div`
@@ -99,7 +99,7 @@ const ToggleButtonStyled = styled.div`
       left: auto;
       opacity: 1;
       color: ${theme.colors.primary};
-      font-weight: ${theme.fonts.weight.bold};
+      font-weight: ${theme.fonts.weights.bold};
     }
 
     // small circle when not checked
@@ -130,4 +130,4 @@ const ToggleButtonStyled = styled.div`
       background-color: ${theme.colors.primary};
     }
   }
-`
+`;
