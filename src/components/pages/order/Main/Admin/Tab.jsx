@@ -2,9 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import { theme } from "../../../../../theme";
 
-export default function Tab({ Icon }) {
+export default function Tab({ Icon, onClick, className }) {
 	return (
-		<TabStyled>
+		<TabStyled onClick={onClick} className={className}>
 			<div className="icon">{Icon}</div>
 		</TabStyled>
 	);
@@ -21,7 +21,6 @@ const TabStyled = styled.button`
   cursor: pointer;
 
   position:relative;
-  left:5%;
   top:1px;
 
   font-size: ${theme.fonts.size.P0};
