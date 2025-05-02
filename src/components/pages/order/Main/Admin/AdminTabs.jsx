@@ -4,6 +4,7 @@ import { theme } from "../../../../../theme";
 import Tab from "./Tab";
 import { FiChevronDown, FiChevronUp } from "react-icons/fi";
 import { AiOutlinePlus } from "react-icons/ai";
+import { MdModeEditOutline } from "react-icons/md";
 
 export default function AdminTabs({ isCollapsed, setIsCollapsed }) {
 	const handleClick = () => {
@@ -22,6 +23,12 @@ export default function AdminTabs({ isCollapsed, setIsCollapsed }) {
 			<Tab
 				label="Ajouter un produit"
 				Icon={<AiOutlinePlus />}
+				onClick={handleClick}
+				className={isCollapsed ? "is-active" : ""}
+			/>
+			<Tab
+				label="Modifier un produit"
+				Icon={<MdModeEditOutline />}
 				onClick={handleClick}
 				className={isCollapsed ? "is-active" : ""}
 			/>
