@@ -8,18 +8,15 @@ import OrderContext from "../../../context/OrderContext";
 export default function OrderPage() {
 	const [isModeAdmin, setIsModeAdmin] = useState(true);
 	const [isCollapsed, setIsCollapsed] = useState(false);
-	const [isAddTabSelected, setisAddTabSelected] = useState(true);
-	const [isEditTabSelected, setIsEditTabSelected] = useState(false);
+	const [currentTableSelected, setCurrentTableSelected] = useState("add");
 
 	const orderContextValue = {
 		isModeAdmin,
 		setIsModeAdmin,
 		isCollapsed,
 		setIsCollapsed,
-		isAddTabSelected,
-		setisAddTabSelected,
-		isEditTabSelected,
-		setIsEditTabSelected,
+		currentTableSelected,
+		setCurrentTableSelected,
 	};
 
 	return (
