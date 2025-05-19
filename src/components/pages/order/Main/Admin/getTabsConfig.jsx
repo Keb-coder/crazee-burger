@@ -1,17 +1,18 @@
 import { AiOutlinePlus } from "react-icons/ai";
 import { MdModeEditOutline } from "react-icons/md";
 
-export const getTabsConfig = (currentTableSelected) => [
+export const getTabsConfig = () => [
 	{
 		index: "add",
 		label: "Ajouter un produit",
 		Icon: <AiOutlinePlus />,
-		className: currentTableSelected === "add" ? "is-active" : "",
 	},
 	{
 		index: "edit",
 		label: "Modifier un produit",
 		Icon: <MdModeEditOutline />,
-		className: currentTableSelected === "edit" ? "is-active" : "",
 	},
 ];
+
+export const getTabSelected = (tabs, currentTabSelected) =>
+	tabs.find((tab) => tab.index === currentTabSelected);
